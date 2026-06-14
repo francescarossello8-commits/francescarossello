@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiedi un preventivo – FR Visual Design</title>
+    <meta name="description" content="Richiedi un preventivo a FR Visual Design per grafica, identità visiva, murales, siti web, landing page e gestionali su misura.">
+    <link rel="canonical" href="contatti.html">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-single">
+    <a href="#main" class="skip-link">Salta al contenuto</a>
+    <!-- Navigazione -->
+    <nav class="navbar" aria-label="Navigazione principale">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo FR Visual Design di Francesca Rossello" width="121" height="107" decoding="async">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="metodo.html">Metodo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="gestionali.html">Gestionali</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="contatti.html#preventivo" class="nav-cta">Preventivo</a></li>
+        </ul>
+    </nav>
+
+    
+    <main id="main">
+<!-- Contatti -->
+    <section id="contatti">
+        <h1>Richiedi un preventivo</h1>
+        <p class="section-intro">Un percorso guidato per raccontare il progetto con le domande giuste, senza trasformarlo in un modulo burocratico.</p>
+        <div class="contact-prompt">
+            <p>Scrivimi con poche righe: cosa vuoi comunicare, a chi deve arrivare e dove verrà visto. Ti risponderò con una prima direzione e, se il progetto è chiaro, con una proposta di preventivo.</p>
+            <div class="direct-contact">
+                <a href="mailto:francescarossello8@gmail.com">Email diretta</a>
+                <a href="https://www.instagram.com/francescarossello.desing?igsh=bXFubzhxcjc3ZnI2" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                <a href="https://www.linkedin.com/in/francesca-rossello-5655a63ba" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                <a href="https://www.facebook.com/profile.php?id=61572148971467" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+            </div>
+            <p class="phone-contact">Telefono: +39 380 267 7988</p>
+        </div>
+        <div class="contact-wrapper" id="preventivo">
+            <form class="contact-form request-wizard js-contact-form js-request-wizard" action="https://formsubmit.co/ajax/francescarossello8@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Richiesta preventivo dal sito FR Visual Design">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="source" value="sito_fr_visual_design">
+                <input type="hidden" name="project_type" data-wizard-service>
+                <input type="hidden" name="servizio_scelto" data-wizard-service-copy>
+                <input type="hidden" name="risposte_strutturate" data-wizard-structured>
+                <input type="hidden" name="riepilogo_testuale" data-wizard-summary>
+                <input type="hidden" name="message" data-wizard-message>
+
+                <header class="request-wizard__header">
+                    <div>
+                        <p class="eyebrow">Richiesta guidata</p>
+                        <h2>Raccontami cosa vuoi realizzare</h2>
+                        <p>Il sito raccoglie il brief. Il preventivo verrà preparato e verificato personalmente da Francesca.</p>
+                    </div>
+                    <span class="request-wizard__step-copy" data-wizard-step-copy>Step 1 di 5</span>
+                </header>
+
+                <div class="request-wizard__progress" aria-label="Avanzamento richiesta">
+                    <span class="is-active" data-wizard-progress="0">1<i>Dati</i></span>
+                    <span data-wizard-progress="1">2<i>Servizio</i></span>
+                    <span data-wizard-progress="2">3<i>Progetto</i></span>
+                    <span data-wizard-progress="3">4<i>Tempi</i></span>
+                    <span data-wizard-progress="4">5<i>Riepilogo</i></span>
+                </div>
+
+                <section class="request-wizard__step is-active" data-wizard-step="0">
+                    <div class="request-wizard__title"><span>01</span><div><h3>Partiamo da te</h3><p>I riferimenti utili per capire chi contattare e in quale contesto nasce il progetto.</p></div></div>
+                    <div class="request-wizard__grid">
+                        <label><span>Nome / ragione sociale *</span><input type="text" name="nome" autocomplete="name" required></label>
+                        <label><span>Referente, se diverso</span><input type="text" name="referente"></label>
+                        <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
+                        <label><span>Telefono</span><input type="tel" name="telefono" autocomplete="tel"></label>
+                        <label><span>Tipo cliente *</span><select name="tipo_cliente" required><option value="">Seleziona...</option><option>Privato</option><option>Azienda</option><option>Associazione</option><option>Scuola</option><option>Canile</option><option>Palestra</option><option>Evento</option><option>Studio creativo</option><option>Altro</option></select></label>
+                        <label><span>Città</span><input type="text" name="citta" autocomplete="address-level2"></label>
+                        <label class="request-wizard__wide"><span>Note iniziali</span><textarea name="note_iniziali" rows="3" placeholder="Il contesto o l'idea da cui vuoi partire"></textarea></label>
+                    </div>
+                </section>
+
+                <section class="request-wizard__step" data-wizard-step="1" hidden>
+                    <div class="request-wizard__title"><span>02</span><div><h3>Che tipo di progetto vuoi realizzare?</h3><p>Scegli il servizio più vicino alla tua esigenza. Potrai precisare tutto nel passaggio successivo.</p></div></div>
+                    <div class="request-service-grid" data-wizard-services></div>
+                    <p class="request-wizard__validation" data-wizard-service-error aria-live="polite"></p>
+                </section>
+
+                <section class="request-wizard__step" data-wizard-step="2" hidden>
+                    <div class="request-wizard__title"><span>03</span><div><h3 data-wizard-question-title>Domande sul progetto</h3><p>Le domande cambiano in base al servizio scelto e servono solo a preparare un confronto utile.</p></div></div>
+                    <div class="request-wizard__grid" data-wizard-questions></div>
+                </section>
+
+                <section class="request-wizard__step" data-wizard-step="3" hidden>
+                    <div class="request-wizard__title"><span>04</span><div><h3>Budget, materiali e tempi</h3><p>Indicazioni comuni per capire priorità e modo migliore di ricontattarti.</p></div></div>
+                    <div class="request-wizard__grid">
+                        <label><span>Budget indicativo *</span><select name="budget" required><option value="">Seleziona...</option><option>Meno di 100 €</option><option>100–250 €</option><option>250–500 €</option><option>500–1000 €</option><option>Oltre 1000 €</option><option>Da valutare</option></select></label>
+                        <label><span>Quando ti serve? *</span><select name="urgenza" required><option value="">Seleziona...</option><option>Nessuna urgenza</option><option>Entro 1 settimana</option><option>Entro 2 settimane</option><option>Entro 1 mese</option><option>Data precisa</option></select></label>
+                        <label><span>Data precisa, se presente</span><input type="date" name="deadline"></label>
+                        <label><span>Preferisci essere contattato via *</span><select name="contatto_preferito" required><option value="">Seleziona...</option><option>Email</option><option>Telefono</option><option>WhatsApp</option></select></label>
+                        <label class="request-wizard__wide"><span>Materiali già disponibili</span><textarea name="materiali_disponibili" rows="3" placeholder="Logo, testi, foto, video, file esistenti..."></textarea></label>
+                        <label class="request-wizard__wide"><span>Altre note</span><textarea name="note_finali" rows="3"></textarea></label>
+                    </div>
+                </section>
+
+                <section class="request-wizard__step" data-wizard-step="4" hidden>
+                    <div class="request-wizard__title"><span>05</span><div><h3>Controlla prima di inviare</h3><p>Puoi tornare indietro e modificare qualsiasi risposta.</p></div></div>
+                    <div class="request-wizard__summary" data-wizard-review></div>
+                    <label class="privacy-consent">
+                        <input type="checkbox" name="privacy" required>
+                        <span>Acconsento al trattamento dei dati inseriti per essere ricontattato/a in merito alla richiesta inviata. Ho letto la <a href="privacy-policy.html">Privacy Policy</a>.</span>
+                    </label>
+                    <p class="request-wizard__notice">Questa è una richiesta di contatto: il sito non genera preventivi automatici.</p>
+                    <button type="submit">Invia la richiesta</button>
+                </section>
+
+                <nav class="request-wizard__actions" aria-label="Navigazione richiesta">
+                    <button type="button" class="secondary" data-wizard-back disabled>Indietro</button>
+                    <button type="button" data-wizard-next>Avanti</button>
+                </nav>
+                <p class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer>
+        <p>© 2026 FR Visual Design di Francesca Rossello · Se non è chiaro, non funziona.</p>
+        <div class="footer-links" aria-label="Informazioni legali">
+            <a href="privacy-policy.html">Privacy e AI</a>
+            <a href="privacy-policy.html#cookie-policy">Cookie Policy</a>
+            <button type="button" class="cookie-preferences-link" data-open-cookie-preferences>Preferenze cookie</button>
+            <span>Dati fiscali in fase di definizione</span>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

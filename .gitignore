@@ -1,0 +1,14 @@
+*.zip
+*.log
+.cache/
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+.env
+node_modules/
+dist/
+backups/
+
+# Asset legacy non utilizzato dal sito pubblico.
+audio/
