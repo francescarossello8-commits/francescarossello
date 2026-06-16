@@ -1,6 +1,6 @@
 # FR Visual Design
 
-Sito pubblico statico di **FR Visual Design**, progetto creativo di Francesca Rossello dedicato a visual design, murales, grafica, siti web, landing page e gestionali su misura.
+Sito pubblico statico di **FR Visual Design**, progetto creativo di Francesca Rossello dedicato a visual design, murales, grafica, siti web, landing page e strumenti digitali organizzativi.
 
 ## Sezioni del sito
 
@@ -18,7 +18,7 @@ Sito pubblico statico di **FR Visual Design**, progetto creativo di Francesca Ro
 - PDF scheda progetto
 - Wizard richiesta preventivo con 10 servizi
 - FormSubmit con fallback `mailto:`
-- Pagina servizi gestionali
+- Pagina strumenti digitali organizzativi
 
 ## Nota tecnica
 
@@ -27,9 +27,11 @@ Il sito è statico e pubblicabile con GitHub Pages.
 - Non contiene dati clienti.
 - Non contiene credenziali.
 - Non contiene backend.
-- Non è collegato tecnicamente ad Archimede Suite.
-- Non è collegato tecnicamente a FR Visual Gest.
-- FR Visual Gest è un progetto separato.
+- Non contiene collegamenti tecnici a progetti esterni.
+
+## Testimonianze
+
+La recensione del Canile di Savona è tratta da post pubblico e deve restare collegata al progetto Arvey. Non inserire recensioni non reali o non attribuite.
 
 ## Pubblicazione con GitHub Pages
 
