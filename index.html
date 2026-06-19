@@ -39,7 +39,17 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li class="nav-item nav-item--has-submenu">
+                <a href="chi-sono.html" aria-haspopup="true">Chi sono</a>
+                <ul class="nav-submenu" aria-label="Sezioni Chi sono">
+                    <li><a href="chi-sono.html#profilo">Profilo</a></li>
+                    <li><a href="chi-sono.html#percorso">Percorso</a></li>
+                    <li><a href="chi-sono.html#formazione">Grafica e formazione</a></li>
+                    <li><a href="chi-sono.html#sport">Sport e disciplina</a></li>
+                    <li><a href="chi-sono.html#sociale">Volontariato e sociale</a></li>
+                    <li><a href="chi-sono.html#metodo-personale">Metodo</a></li>
+                </ul>
+            </li>
             <li><a href="metodo.html">Metodo</a></li>
             <li><a href="servizi.html">Servizi</a></li>
             <li><a href="gestionali.html">Gestionali</a></li>
@@ -174,12 +184,23 @@
                 <img src="images/francesca-home.jpg" alt="Ritratto di Francesca Rossello, visual designer" width="257" height="304" decoding="async" loading="lazy">
             </figure>
             <div class="home-about__copy">
-                <p class="eyebrow">Chi è Francesca</p>
-                <h2 id="about-title">Uno sguardo visivo, pratico e sensibile.</h2>
-                <p>Sono Francesca Rossello, visual designer e videomaker con base a Savona.</p>
-                <p>Unisco grafica, pittura, storytelling e strumenti digitali per trasformare idee ed emozioni in progetti visivi concreti.</p>
-                <p>Ogni lavoro nasce dall’ascolto, dalla ricerca e dalla cura dei dettagli.</p>
-                <a href="chi-sono.html" class="text-link">Scopri il mio percorso</a>
+                <p class="eyebrow">Profilo</p>
+                <h2 id="about-title">Chi è Francesca</h2>
+                <p class="home-about__subtitle">Visual designer, atleta, volontaria e giovane progettista visiva con base a Savona.</p>
+                <p>Francesca Rossello unisce creatività, disciplina sportiva, studio scientifico e impegno sociale. Nei suoi progetti porta metodo, sensibilità e attenzione al messaggio: non solo immagini belle, ma comunicazione visiva pensata per restare.</p>
+                <div class="home-highlights" aria-labelledby="home-highlights-title">
+                    <h3 id="home-highlights-title">In breve</h3>
+                    <ul class="home-highlight-list">
+                        <li><strong>Studentessa del Liceo Scientifico tradizionale di Savona</strong><span>Percorso e orientamento “Biologia con curvatura biomedica”.</span></li>
+                        <li><strong>Direttrice di redazione</strong><span>Giornalino del Liceo Scientifico di Savona “Farò del mio peggio”.</span></li>
+                        <li><strong>Campionessa italiana U21 di jujutsu</strong><span>Convocata nella Nazionale Italiana.</span></li>
+                        <li><strong>Volontaria Croce Rossa Italiana</strong><span>Esperienza concreta di responsabilità, servizio e attenzione alle persone.</span></li>
+                        <li><strong>Graphic Designer</strong><span>Attestazione Accademia Domani con massimo punteggio.</span></li>
+                        <li><strong>Master DaVante Corsicef</strong><span>Percorso in grafica pubblicitaria e marketing in fase di conclusione.</span></li>
+                        <li><strong>Campagne sociali e riqualificazione</strong><span>Progetti visivi dedicati alla città, alla sensibilizzazione e agli spazi comuni.</span></li>
+                    </ul>
+                </div>
+                <a href="chi-sono.html" class="text-link">Scopri il percorso completo</a>
             </div>
         </section>
 
