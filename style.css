@@ -490,7 +490,8 @@ html[data-theme="light"] .page-nav__button:focus-visible {
 }
 
 .nav-links .nav-item--has-submenu:hover > .nav-submenu,
-.nav-links .nav-item--has-submenu:focus-within > .nav-submenu {
+.nav-links .nav-item--has-submenu:focus-within > .nav-submenu,
+.nav-links .nav-item--has-submenu.is-submenu-open > .nav-submenu {
     display: block;
 }
 
@@ -4414,8 +4415,8 @@ html[data-theme="light"] .portfolio-page #portfolio::after {
     }
 
     .nav-links .nav-item--has-submenu {
-        padding-bottom: 12px;
-        margin-bottom: -12px;
+        padding-bottom: 18px;
+        margin-bottom: -18px;
     }
 
     .nav-links .nav-submenu {
@@ -4430,7 +4431,7 @@ html[data-theme="light"] .portfolio-page #portfolio::after {
         padding: 10px;
         pointer-events: none;
         position: absolute;
-        top: calc(100% + 6px);
+        top: calc(100% + 2px);
         transform: translate(-50%, 8px);
         transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
         visibility: hidden;
@@ -4438,7 +4439,8 @@ html[data-theme="light"] .portfolio-page #portfolio::after {
     }
 
     .nav-links .nav-item--has-submenu:hover .nav-submenu,
-    .nav-links .nav-item--has-submenu:focus-within .nav-submenu {
+    .nav-links .nav-item--has-submenu:focus-within .nav-submenu,
+    .nav-links .nav-item--has-submenu.is-submenu-open .nav-submenu {
         display: block;
         opacity: 1;
         pointer-events: auto;
