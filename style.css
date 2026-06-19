@@ -484,6 +484,16 @@ html[data-theme="light"] .page-nav__button:focus-visible {
     padding: 0;
 }
 
+.nav-links .nav-submenu {
+    display: none;
+    list-style: none;
+}
+
+.nav-links .nav-item--has-submenu:hover > .nav-submenu,
+.nav-links .nav-item--has-submenu:focus-within > .nav-submenu {
+    display: block;
+}
+
 .site-sidebar .nav-item--has-submenu > a {
     color: var(--gold);
 }
@@ -1556,6 +1566,15 @@ section p.section-intro {
     letter-spacing: -0.035em;
     line-height: 1;
     text-align: left;
+}
+
+.gest-benefits-section h2 {
+    color: var(--gold);
+    font-size: clamp(2.1em, 4.2vw, 3.8em);
+    line-height: 1.06;
+    max-width: 980px;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
 }
 
 .gestionali-real-example p:not(.eyebrow),
@@ -3903,8 +3922,10 @@ html[data-theme="light"] .creative-agent__eye::after {
     border: 1px solid rgba(199, 164, 90, 0.18);
     border-radius: 999px;
     color: var(--text-muted);
+    display: inline-flex;
     font-size: 0.88em;
     font-weight: 800;
+    line-height: 1.2;
     padding: 9px 13px;
     text-decoration: none;
 }
@@ -4379,6 +4400,7 @@ html[data-theme="light"] .portfolio-page #portfolio::after {
         border: 1px solid rgba(199, 164, 90, 0.24);
         border-radius: 16px;
         box-shadow: 0 24px 54px rgba(0, 0, 0, 0.28);
+        display: block;
         left: 50%;
         min-width: 238px;
         opacity: 0;
@@ -4394,6 +4416,7 @@ html[data-theme="light"] .portfolio-page #portfolio::after {
 
     .nav-links .nav-item--has-submenu:hover .nav-submenu,
     .nav-links .nav-item--has-submenu:focus-within .nav-submenu {
+        display: block;
         opacity: 1;
         pointer-events: auto;
         transform: translate(-50%, 0);
