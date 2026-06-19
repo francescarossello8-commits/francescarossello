@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi sono – FR Visual Design</title>
-    <meta name="description" content="Francesca Rossello è la visual designer dietro FR Visual Design: grafica, identità, murales, siti e strumenti digitali su misura.">
+    <title>Chi sono – Francesca Rossello | FR Visual Design</title>
+    <meta name="description" content="Francesca Rossello, visual designer a Savona: studentessa del Liceo Scientifico, campionessa italiana U21 di jujutsu, volontaria CRI, direttrice di redazione e graphic designer.">
     <link rel="canonical" href="chi-sono.html">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-single">
+<body class="page-single about-page">
     <a href="#main" class="skip-link">Salta al contenuto</a>
     <!-- Navigazione -->
     <nav class="navbar" aria-label="Navigazione principale">
@@ -17,7 +17,17 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li class="nav-item nav-item--has-submenu">
+                <a href="chi-sono.html" aria-haspopup="true">Chi sono</a>
+                <ul class="nav-submenu" aria-label="Sezioni Chi sono">
+                    <li><a href="chi-sono.html#profilo">Profilo</a></li>
+                    <li><a href="chi-sono.html#percorso">Percorso</a></li>
+                    <li><a href="chi-sono.html#formazione">Grafica e formazione</a></li>
+                    <li><a href="chi-sono.html#sport">Sport e disciplina</a></li>
+                    <li><a href="chi-sono.html#sociale">Volontariato e sociale</a></li>
+                    <li><a href="chi-sono.html#metodo-personale">Metodo</a></li>
+                </ul>
+            </li>
             <li><a href="metodo.html">Metodo</a></li>
             <li><a href="servizi.html">Servizi</a></li>
             <li><a href="gestionali.html">Gestionali</a></li>
@@ -28,25 +38,113 @@
         </ul>
     </nav>
 
-    
     <main id="main">
-<!-- Sezione Chi sono -->
-    <section id="chi-sono" class="about-section">
-        <h1>Chi sono</h1>
-        <div class="about-content">
-            <img src="images/about.png" alt="Ritratto di Francesca Rossello, visual designer" class="about-photo" width="257" height="532" decoding="async" loading="lazy">
-            <div class="about-text">
-                <p>Ciao, sono Francesca Rossello, visual designer e videomaker con base a Savona, Liguria.</p>
-                <p>FR Visual Design è il mio progetto creativo: unisce comunicazione visiva, grafica, interventi artistici e soluzioni digitali leggere costruite intorno alle persone.</p>
-                <p>Amo trasformare idee ed emozioni in immagini efficaci, eleganti e memorabili.</p>
-                <p>Mi occupo di branding, grafica pubblicitaria, reel e contenuti video, raccontando storie con sensibilità contemporanea.</p>
-                <p>Accanto al digitale porto avanti anche una ricerca manuale fatta di murales, trompe l'oeil, decorazioni su arredo, spray e pittura: una parte artistica che rende ogni progetto piu personale e riconoscibile.</p>
-                <p>Credo che una buona comunicazione debba essere chiara e memorabile; per questo curo ogni progetto nei dettagli, dalla ricerca alla realizzazione.</p>
+        <section id="profilo" class="about-section about-hero-section">
+            <div class="about-hero">
+                <figure class="about-hero__image">
+                    <img src="images/francesca-home.jpg" alt="Ritratto di Francesca Rossello, visual designer" class="about-photo about-page__photo" width="257" height="304" decoding="async" loading="lazy">
+                </figure>
+                <div class="about-hero__copy">
+                    <p class="eyebrow">Chi sono</p>
+                    <h1>Chi sono</h1>
+                    <p class="about-page__subtitle">Non disegno solo immagini: costruisco messaggi visivi con disciplina, sensibilità e metodo.</p>
+                    <p>Sono Francesca Rossello, visual designer con base a Savona. Il mio percorso nasce dall’incontro tra studio scientifico, disegno, comunicazione, sport agonistico, volontariato e impegno sociale.</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <nav class="about-anchor-nav" aria-label="Sezioni della pagina Chi sono">
+                <a href="#profilo">Profilo</a>
+                <a href="#percorso">Percorso</a>
+                <a href="#formazione">Grafica e formazione</a>
+                <a href="#sport">Sport e disciplina</a>
+                <a href="#sociale">Volontariato e sociale</a>
+                <a href="#metodo-personale">Metodo</a>
+            </nav>
+        </section>
 
-    <!-- Footer -->
+        <section id="percorso" class="about-story-section">
+            <p class="eyebrow">Il mio percorso</p>
+            <h2>Studio, redazione e responsabilità comunicativa.</h2>
+            <div class="about-story-text">
+                <p>Sono studentessa del Liceo Scientifico tradizionale di Savona con percorso e orientamento “Biologia con curvatura biomedica”. Lo studio scientifico mi ha insegnato ad osservare, ragionare, cercare precisione e non fermarmi alla prima impressione.</p>
+                <p>Accanto al percorso scolastico, sono direttrice di redazione del giornalino del Liceo Scientifico di Savona “Farò del mio peggio”: un’esperienza che mi permette di lavorare su idee, testi, immagini, organizzazione editoriale e responsabilità comunicativa.</p>
+            </div>
+        </section>
+
+        <section id="formazione" class="about-story-section about-story-section--split">
+            <div>
+                <p class="eyebrow">Disegno, grafica e formazione</p>
+                <h2>Dalla passione per il disegno a un metodo progettuale.</h2>
+            </div>
+            <div class="about-story-text">
+                <p>Fin da piccolissima ho avuto una forte passione per il disegno artistico e tecnico. Con il tempo ho trasformato questa inclinazione in un percorso più strutturato, frequentando corsi specifici e ottenendo l’attestazione in Graphic Design con il massimo punteggio presso Accademia Domani.</p>
+                <p>Attualmente sto concludendo il master con Davante Corsicef in grafica pubblicitaria e marketing, per rendere il mio lavoro sempre più consapevole, professionale e vicino alle esigenze reali di chi mi affida un progetto.</p>
+            </div>
+        </section>
+
+        <section id="sport" class="about-story-section">
+            <p class="eyebrow">Sport, obiettivi e disciplina</p>
+            <h2>La creatività ha bisogno anche di allenamento.</h2>
+            <div class="about-story-text">
+                <p>Lo sport ha avuto un ruolo fondamentale nella mia crescita. Sono campionessa italiana U21 di jujutsu e sono stata convocata nella Nazionale Italiana.</p>
+                <p>Questo percorso mi ha insegnato a lavorare per obiettivi, rispettare i tempi, reggere la pressione, accettare la fatica e continuare a migliorare anche quando il risultato richiede costanza e disciplina.</p>
+            </div>
+        </section>
+
+        <section id="sociale" class="about-story-section about-story-section--split">
+            <div>
+                <p class="eyebrow">Volontariato e sensibilità sociale</p>
+                <h2>Immagini che parlano alle persone.</h2>
+            </div>
+            <div class="about-story-text">
+                <p>Faccio volontariato nella Croce Rossa Italiana, esperienza che mi avvicina alle persone, alla responsabilità e al valore concreto dell’aiuto.</p>
+                <p>Credo che la comunicazione visiva non serva solo a creare qualcosa di bello, ma anche a dare forma a messaggi importanti. Per questo mi sto impegnando in campagne sociali e progetti di riqualificazione per la mia città, unendo grafica, murales, storytelling e sensibilità sociale.</p>
+            </div>
+        </section>
+
+        <section id="metodo-personale" class="about-story-section about-method-section">
+            <p class="eyebrow">FR Visual Design nasce da qui</p>
+            <h2>Prima il messaggio, poi la forma.</h2>
+            <div class="about-story-text">
+                <p>FR Visual Design nasce dal desiderio di coniugare studio, talento, disciplina e professione. Ogni progetto è per me un’occasione per ascoltare, capire, disegnare e costruire qualcosa che resti.</p>
+                <p>Non parto solo dall’estetica: parto dal messaggio, dal luogo in cui vivrà il progetto e dalle persone a cui deve arrivare.</p>
+            </div>
+        </section>
+
+        <section id="cosa-porto" class="about-values-section" aria-labelledby="about-values-title">
+            <div class="home-section-heading">
+                <p class="eyebrow">Cosa porto nei progetti</p>
+                <h2 id="about-values-title">Quattro qualità concrete, non slogan.</h2>
+            </div>
+            <div class="about-values-grid">
+                <article class="about-value-block">
+                    <span>01</span>
+                    <h3>Disciplina</h3>
+                    <p>Lo sport agonistico mi ha insegnato a lavorare per obiettivi, rispettare i tempi e restare concentrata anche sotto pressione.</p>
+                </article>
+                <article class="about-value-block">
+                    <span>02</span>
+                    <h3>Sensibilità sociale</h3>
+                    <p>Volontariato, campagne sociali e progetti cittadini mi aiutano a costruire immagini che parlano alle persone, non solo agli occhi.</p>
+                </article>
+                <article class="about-value-block">
+                    <span>03</span>
+                    <h3>Cultura visiva</h3>
+                    <p>Disegno artistico, disegno tecnico, grafica pubblicitaria e marketing sono la base del mio modo di progettare.</p>
+                </article>
+                <article class="about-value-block">
+                    <span>04</span>
+                    <h3>Responsabilità</h3>
+                    <p>Il giornalino scolastico, i progetti pubblici e il lavoro con enti e associazioni mi hanno abituata a curare contenuti, tempi e consegne.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-final-cta" aria-labelledby="about-final-title">
+            <p class="eyebrow">Progetto</p>
+            <h2 id="about-final-title">Hai un progetto da trasformare in immagine?</h2>
+            <p>Raccontami l’idea, il luogo, il pubblico e il messaggio. Da lì possiamo costruire una direzione visiva su misura.</p>
+            <a href="contatti.html#preventivo" class="primary">Parliamone</a>
+        </section>
     </main>
 
     <footer>
