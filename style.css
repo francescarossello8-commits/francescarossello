@@ -1523,6 +1523,18 @@ section p.section-intro {
     color: var(--text-muted);
 }
 
+.gestionali-intro a {
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}
+
+.gestionali-intro a:hover,
+.gestionali-intro a:focus-visible {
+    color: var(--ivory);
+}
+
 .gestionali-real-example,
 .gest-feature-section {
     align-items: center;
