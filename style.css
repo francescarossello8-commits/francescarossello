@@ -5812,6 +5812,27 @@ html[data-theme="light"] .home-editorial .hero-subtitle {
 }
 
 @media (max-width: 680px) {
+    .method-brand-hero h1 {
+        font-size: clamp(2rem, 8.8vw, 2.65rem);
+        line-height: 1.02;
+        max-width: 100%;
+        overflow-wrap: normal;
+        text-wrap: balance;
+        word-break: normal;
+    }
+
+    .method-brand-pillars h3 {
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        line-height: 1.08;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .method-brand-pillars article:first-child h3 {
+        font-size: clamp(1.28rem, 5.8vw, 1.62rem);
+        white-space: nowrap;
+    }
+
     .home-editorial .hero {
         overflow: hidden;
         padding: 116px 22px 72px;
@@ -5972,6 +5993,22 @@ html[data-theme="light"] .home-editorial .hero-subtitle {
     .fade-up {
         opacity: 1 !important;
         transform: none !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .method-brand-hero #method-title {
+        font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+        line-height: 1.04 !important;
+        max-width: 100%;
+        overflow-wrap: normal;
+        text-wrap: balance;
+        word-break: normal;
+    }
+
+    .method-brand-pillars article:first-child h3 {
+        font-size: clamp(1.28rem, 5.8vw, 1.62rem) !important;
+        white-space: nowrap;
     }
 }
 
