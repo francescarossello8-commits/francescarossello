@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Stile per FR Visual Design di Francesca Rossello
  * Tema scuro con accenti dorati per un look moderno e professionale.
  */
@@ -18,6 +18,11 @@ html {
     --gold: #d4af37;
     --gold-bright: #f1d784;
     --gold-soft: rgba(212, 175, 55, 0.16);
+    --sea: #77ab9d;
+    --sea-soft: rgba(119, 171, 157, 0.16);
+    --terracotta: #a93f33;
+    --terracotta-soft: rgba(169, 63, 51, 0.16);
+    --wall: #d8cab4;
     --bg: #090807;
     --bg-soft: #0f0d0b;
     --panel: #15130f;
@@ -45,6 +50,11 @@ html[data-theme="light"] {
     --gold: #d4af37;
     --gold-bright: #f1d784;
     --gold-soft: rgba(212, 175, 55, 0.15);
+    --sea: #2f766a;
+    --sea-soft: rgba(47, 118, 106, 0.14);
+    --terracotta: #a93f33;
+    --terracotta-soft: rgba(169, 63, 51, 0.13);
+    --wall: #8b7a65;
     --bg: #f4efe5;
     --bg-soft: #fbf4e8;
     --panel: #fff9ec;
@@ -1576,7 +1586,7 @@ section p.section-intro {
     font-family: var(--font-display);
     font-size: clamp(2em, 4.2vw, 4.2em);
     font-weight: 500;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
     line-height: 1;
     text-align: left;
 }
@@ -2232,6 +2242,34 @@ img[data-protected-media],
     transition: color var(--motion-fast) var(--motion-ease), transform var(--motion-fast) var(--motion-ease);
 }
 
+.project-meta {
+    border-top: 1px solid rgba(226, 197, 121, 0.18);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 18px 0 0;
+    padding-top: 16px;
+}
+
+.project-meta div {
+    min-width: 0;
+}
+
+.project-meta dt {
+    color: var(--sea);
+    font-size: 0.72em;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-meta dd {
+    color: var(--text-muted);
+    font-size: 0.86em;
+    line-height: 1.4;
+    margin: 4px 0 0;
+}
+
 .portfolio-card-link:hover .project-link {
     text-decoration: underline;
     transform: translateY(-2px);
@@ -2524,9 +2562,29 @@ img[data-protected-media],
 
 /* Contatti */
 .contact-prompt {
-    max-width: 820px;
+    align-items: start;
+    background:
+        radial-gradient(circle at 100% 0, var(--sea-soft), transparent 34%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01)),
+        var(--panel);
+    border: 1px solid rgba(226, 197, 121, 0.18);
+    display: grid;
+    gap: 28px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
     margin: -16px auto 36px;
-    text-align: center;
+    max-width: 980px;
+    padding: clamp(26px, 4vw, 42px);
+    text-align: left;
+}
+
+.contact-prompt__copy h2 {
+    color: var(--ivory);
+    font-family: var(--font-display);
+    font-size: clamp(1.9em, 3.8vw, 3.2em);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.06;
+    margin-bottom: 16px;
 }
 
 .contact-prompt p {
@@ -2538,7 +2596,7 @@ img[data-protected-media],
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .direct-contact a.social-link {
@@ -2555,6 +2613,10 @@ img[data-protected-media],
     color: var(--text-muted);
     font-weight: 700;
     margin-top: 16px;
+}
+
+.phone-contact a {
+    color: var(--gold-bright);
 }
 
 .contact-wrapper {
@@ -3896,7 +3958,7 @@ html[data-theme="light"] .creative-agent__eye::after {
     color: var(--ivory);
     font-family: var(--font-display);
     font-weight: 500;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
 }
 
 .about-hero__copy h1 {
@@ -4101,6 +4163,14 @@ html[data-theme="light"] .creative-agent__eye::after {
     margin-bottom: 18px;
     object-fit: cover;
     width: 100%;
+}
+
+.blog-post > img.blog-post__image--poster {
+    aspect-ratio: 4 / 5;
+    background-color: var(--panel-deep);
+    height: auto;
+    object-fit: contain;
+    object-position: center;
 }
 
 .blog-post h4 {
@@ -4772,7 +4842,8 @@ html[data-theme="light"] .nav-links .nav-submenu a {
 .home-editorial .hero {
     align-items: center;
     background:
-        radial-gradient(circle at 80% 18%, rgba(212, 175, 55, 0.16), transparent 34%),
+        radial-gradient(circle at 78% 14%, var(--sea-soft), transparent 32%),
+        radial-gradient(circle at 12% 78%, var(--terracotta-soft), transparent 28%),
         linear-gradient(180deg, rgba(23, 19, 15, 0.82) 0%, var(--bg) 100%);
     display: grid;
     gap: clamp(36px, 6vw, 82px);
@@ -4783,7 +4854,9 @@ html[data-theme="light"] .nav-links .nav-submenu a {
 
 .home-editorial .hero::before {
     background:
-        linear-gradient(90deg, rgba(9, 8, 7, 0.92), transparent 58%),
+        linear-gradient(90deg, rgba(9, 8, 7, 0.94), transparent 58%),
+        linear-gradient(104deg, transparent 0 54%, rgba(119, 171, 157, 0.2) 54% 57%, transparent 57% 100%),
+        linear-gradient(84deg, transparent 0 12%, rgba(169, 63, 51, 0.22) 12% 15%, transparent 15% 100%),
         radial-gradient(circle at 16% 72%, rgba(212, 175, 55, 0.1), transparent 34%);
     opacity: 1;
 }
@@ -4804,7 +4877,7 @@ html[data-theme="light"] .nav-links .nav-submenu a {
 
 .home-editorial .hero h1 {
     font-size: clamp(3em, 7.4vw, 7.4em);
-    letter-spacing: -0.045em;
+    letter-spacing: 0;
     line-height: 0.92;
     max-width: 980px;
 }
@@ -4814,6 +4887,29 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     font-size: clamp(1.15em, 2vw, 1.55em);
     font-weight: 500;
     max-width: 760px;
+}
+
+.hero-proof-strip {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 28px;
+    max-width: 760px;
+}
+
+.hero-proof-strip span {
+    background: rgba(255, 255, 255, 0.035);
+    border-left: 2px solid var(--sea);
+    color: var(--wall);
+    font-size: 0.88em;
+    font-weight: 800;
+    line-height: 1.35;
+    padding: 10px 12px;
+}
+
+.hero-proof-strip span:nth-child(2),
+.hero-proof-strip span:nth-child(4) {
+    border-left-color: var(--terracotta);
 }
 
 .home-hero__visual {
@@ -4853,7 +4949,7 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     font-family: var(--font-display);
     font-size: clamp(2.2em, 4.8vw, 4.7em);
     font-weight: 500;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
     line-height: 1.02;
 }
 
@@ -4865,7 +4961,8 @@ html[data-theme="light"] .nav-links .nav-submenu a {
 }
 
 .text-link,
-.home-contact .primary {
+.home-contact .primary,
+.home-contact .secondary {
     color: var(--gold);
     display: inline-flex;
     font-weight: 900;
@@ -4908,6 +5005,16 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     font-weight: 900;
     letter-spacing: 0.16em;
     margin-bottom: 22px;
+}
+
+.editorial-area:nth-child(2) span,
+.editorial-area:nth-child(2) h3 {
+    color: var(--sea);
+}
+
+.editorial-area:nth-child(3) span,
+.editorial-area:nth-child(3) h3 {
+    color: var(--terracotta);
 }
 
 .editorial-area h3 {
@@ -5088,7 +5195,7 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     font-family: var(--font-display);
     font-size: clamp(2em, 4vw, 3.7em);
     font-weight: 500;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
     line-height: 1.02;
     margin-bottom: 20px;
 }
@@ -5225,16 +5332,34 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     max-width: 760px;
 }
 
-.home-contact .primary {
+.home-contact__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.home-contact .primary,
+.home-contact .secondary {
+    align-items: center;
     background-color: var(--gold);
     border-radius: 999px;
     color: var(--bg);
+    justify-content: center;
     padding: 14px 30px;
 }
 
+.home-contact .secondary {
+    background-color: transparent;
+    border: 1px solid rgba(226, 197, 121, 0.42);
+    color: var(--gold-bright);
+}
+
 .home-contact .primary:hover,
-.home-contact .primary:focus-visible {
+.home-contact .primary:focus-visible,
+.home-contact .secondary:hover,
+.home-contact .secondary:focus-visible {
     background-color: var(--gold-bright);
+    color: var(--bg);
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -5267,6 +5392,7 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     .home-editorial .hero,
     .home-about,
     .editorial-areas,
+    .contact-prompt,
     .about-hero,
     .about-story-section--split,
     .gestionali-real-example,
@@ -5316,9 +5442,23 @@ html[data-theme="light"] .nav-links .nav-submenu a {
         max-width: 100%;
     }
 
+    .hero-proof-strip,
+    .project-meta {
+        grid-template-columns: 1fr;
+    }
+
     .home-contact {
         margin-bottom: 50px;
         padding: 34px 22px;
+    }
+
+    .home-contact__actions,
+    .home-contact__actions a {
+        width: 100%;
+    }
+
+    .home-contact__actions a {
+        text-align: center;
     }
 
     .home-highlight-list,
@@ -5366,3 +5506,4 @@ html[data-theme="light"] .nav-links .nav-submenu a {
         transform: none !important;
     }
 }
+
