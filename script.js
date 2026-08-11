@@ -134,24 +134,24 @@ const createCookieConsent = () => {
         <div class="cookie-consent__content">
             <p class="eyebrow">Privacy e cookie</p>
             <h2 id="cookie-consent-title">Scegli quali cookie usare</h2>
-            <p>Usiamo cookie tecnici necessari per far funzionare il sito. Puoi scegliere liberamente se autorizzare anche analytics e marketing: restano disattivati finche non dai il consenso.</p>
+            <p>Uso cookie tecnici necessari. Analytics e marketing restano spenti finché non li autorizzi.</p>
             <div class="cookie-options" aria-label="Categorie cookie">
                 <label class="cookie-option is-required">
                     <input type="checkbox" checked disabled>
-                    <span><strong>Necessari</strong>Servono al funzionamento del sito e delle preferenze privacy. Non possono essere disattivati.</span>
+                    <span><strong>Necessari</strong><small>Funzionamento del sito e preferenze privacy.</small></span>
                 </label>
                 <label class="cookie-option">
                     <input type="checkbox" data-cookie-toggle="analytics">
-                    <span><strong>Analytics</strong>Aiutano a capire come viene usato il sito, solo se verranno collegati strumenti di analisi.</span>
+                    <span><strong>Analytics</strong><small>Statistiche anonime, solo se attivate.</small></span>
                 </label>
                 <label class="cookie-option">
                     <input type="checkbox" data-cookie-toggle="marketing">
-                    <span><strong>Marketing</strong>Servono per contenuti promozionali o tracciamenti pubblicitari, solo se verranno aggiunti in futuro.</span>
+                    <span><strong>Marketing</strong><small>Promozione e tracciamenti, solo se aggiunti in futuro.</small></span>
                 </label>
             </div>
             <div class="cookie-actions">
                 <button type="button" class="secondary" data-cookie-reject>Solo necessari</button>
-                <button type="button" class="secondary" data-cookie-save>Salva preferenze</button>
+                <button type="button" class="secondary" data-cookie-save>Salva</button>
                 <button type="button" class="primary" data-cookie-accept>Accetta tutti</button>
             </div>
             <a href="privacy-policy.html#cookie-policy" class="cookie-policy-link">Leggi la Cookie Policy</a>
@@ -916,11 +916,6 @@ const showRightsToast = (message = rightsMessage) => {
 const initializeImageProtection = () => {
     document.querySelectorAll("img").forEach((image) => {
         image.dataset.protectedMedia = "";
-        image.setAttribute("draggable", "false");
-        image.addEventListener("dragstart", (event) => {
-            event.preventDefault();
-            showRightsToast();
-        });
     });
 
     document.querySelectorAll("footer").forEach((footer) => {
@@ -930,7 +925,7 @@ const initializeImageProtection = () => {
 
         const notice = document.createElement("p");
         notice.className = "footer-rights";
-        notice.innerHTML = 'Immagini e contenuti visivi: tutti i diritti riservati. Riproduzione, salvataggio, screenshot e uso senza autorizzazione sono vietati. <a href="privacy-policy.html#diritti-immagini">Dettagli</a>';
+        notice.innerHTML = 'Immagini e contenuti visivi: tutti i diritti riservati. Per riprodurli o usarli in altri contesti serve autorizzazione scritta. <a href="privacy-policy.html#diritti-immagini">Dettagli</a>';
         footer.insertBefore(notice, footer.querySelector(".footer-links"));
     });
 
@@ -941,7 +936,7 @@ const initializeImageProtection = () => {
 
         const note = document.createElement("p");
         note.className = "asset-rights-note";
-        note.textContent = "Le immagini sono mostrate solo a scopo portfolio: riproduzione, download, screenshot, modifica e utilizzo senza autorizzazione scritta sono vietati.";
+        note.textContent = "Le immagini sono mostrate a scopo portfolio: per riproduzione, modifica o utilizzo in altri contesti serve autorizzazione scritta.";
         section.insertBefore(note, section.querySelector(".project-gallery"));
     });
 
@@ -955,30 +950,6 @@ const initializeImageProtection = () => {
 };
 
 initializeImageProtection();
-
-document.addEventListener("contextmenu", (event) => {
-    const protectedTarget = event.target.closest("[data-protected-media], [data-protected-image-link], .portfolio-preview, .portfolio-item, .project-image, .work-card, .art-card");
-
-    if (!protectedTarget) {
-        return;
-    }
-
-    event.preventDefault();
-    showRightsToast();
-});
-
-document.addEventListener("keydown", (event) => {
-    const key = event.key.toLowerCase();
-    const isPrintScreen = key === "printscreen";
-    const isSaveOrPrint = (event.ctrlKey || event.metaKey) && (key === "s" || key === "p");
-
-    if (!isPrintScreen && !isSaveOrPrint) {
-        return;
-    }
-
-    event.preventDefault();
-    showRightsToast("Contenuti visivi protetti: salvataggio, stampa e screenshot non autorizzati sono vietati.");
-});
 
 const setPreventivoProjectType = (projectType) => {
     if (!projectType) {
@@ -1142,7 +1113,7 @@ const setTheme = (theme) => {
         toggle.setAttribute("aria-pressed", String(isLight));
         toggle.setAttribute("aria-label", isLight ? "Passa al tema scuro" : "Passa al tema chiaro");
         toggle.querySelector(".theme-toggle__icon").textContent = isLight ? "☾" : "☀";
-        toggle.querySelector(".theme-toggle__label").textContent = isLight ? "Dark mode" : "Light mode";
+        toggle.querySelector(".theme-toggle__label").textContent = isLight ? "Tema scuro" : "Tema chiaro";
     }
 };
 
