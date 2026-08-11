@@ -625,6 +625,15 @@ const createRequestGuideAgent = () => {
         return;
     }
 
+    const isPortfolioSurface = document.body.classList.contains("portfolio-page")
+        || document.body.classList.contains("project-page")
+        || window.location.pathname.split("/").pop().startsWith("portfolio-")
+        || window.location.pathname.split("/").pop() === "la-fiducia-che-torna-a-casa.html"
+        || window.location.pathname.split("/").pop() === "arvey-continua-la-sua-missione-d-amore.html";
+    if (isPortfolioSurface) {
+        return;
+    }
+
     const widget = document.createElement("section");
     widget.className = "creative-agent";
     widget.dataset.creativeAgent = "";
