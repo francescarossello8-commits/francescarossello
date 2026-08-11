@@ -4173,6 +4173,13 @@ html[data-theme="light"] .creative-agent__eye::after {
     object-position: center;
 }
 
+.blog-post > img.blog-post__image--editorial {
+    background-color: var(--panel-deep);
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
 .blog-post h4 {
     margin-bottom: 10px;
     font-size: 1.4em;
@@ -4248,11 +4255,21 @@ html[data-theme="light"] .creative-agent__eye::after {
 .editorial-post {
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .editorial-post__hero {
     margin: 40px auto 50px;
     max-width: 820px;
+    width: min(100%, 820px);
+}
+
+.mobile-title-line {
+    display: inline;
+}
+
+.editorial-post__picture {
+    display: block;
 }
 
 .editorial-post__hero img {
@@ -4263,6 +4280,7 @@ html[data-theme="light"] .creative-agent__eye::after {
     height: auto;
     margin: 0 auto;
     max-height: 820px;
+    max-width: 100%;
     object-fit: contain;
     width: 100%;
 }
@@ -4659,6 +4677,54 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     section {
         padding: 60px 18px;
         scroll-margin-top: 150px;
+    }
+
+    .editorial-post {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .editorial-post .eyebrow,
+    .editorial-post h1,
+    .editorial-post .section-intro {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        text-wrap: balance;
+    }
+
+    .editorial-post h1 {
+        font-size: clamp(1.78rem, 7.8vw, 2.05rem);
+        line-height: 1.06;
+    }
+
+    .mobile-title-line {
+        display: block;
+    }
+
+    .editorial-post .section-intro {
+        font-size: 1rem;
+        max-width: 30ch;
+    }
+
+    .editorial-post .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+    }
+
+    .editorial-post__hero {
+        margin: 32px auto 38px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .editorial-post__content {
+        padding: 22px;
+    }
+
+    .editorial-post__hero figcaption,
+    .editorial-post__content p,
+    .editorial-post__content li {
+        overflow-wrap: break-word;
     }
 
     .hero {
