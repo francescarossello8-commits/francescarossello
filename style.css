@@ -209,7 +209,7 @@ body.page-single {
     gap: 8px;
     left: 22px;
     padding: 9px 14px;
-    position: fixed;
+    position: absolute;
     text-decoration: none;
     top: 92px;
     z-index: 1200;
@@ -1884,8 +1884,8 @@ section p.section-intro {
 }
 
 .portfolio-brush-strip {
-    height: 74px;
-    margin: -16px auto 10px;
+    height: 48px;
+    margin: -22px auto 0;
     max-width: 900px;
     position: relative;
 }
@@ -1931,7 +1931,7 @@ section p.section-intro {
 
 .portfolio-explanation {
     max-width: 860px;
-    margin: -22px auto 48px auto;
+    margin: -18px auto 34px auto;
     color: var(--text-muted);
     font-size: 1.1em;
     line-height: 1.6;
@@ -1943,25 +1943,26 @@ section p.section-intro {
     border-bottom: 1px solid var(--line-soft);
     border-top: 1px solid var(--line-soft);
     display: grid;
-    gap: clamp(22px, 4vw, 54px);
-    grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.92fr);
-    margin: -16px auto 42px;
+    gap: clamp(20px, 3vw, 38px);
+    grid-template-columns: minmax(0, 0.72fr) minmax(420px, 1fr);
+    margin: 0 auto 34px;
     max-width: 1160px;
-    padding: clamp(24px, 4vw, 42px) 0;
+    padding: clamp(18px, 2.6vw, 30px) 0;
 }
 
 .portfolio-insight p:not(.eyebrow) {
     color: var(--ivory);
     font-family: var(--font-display);
-    font-size: clamp(1.55em, 3vw, 3.1em);
+    font-size: clamp(1.35em, 2.1vw, 2.15em);
     font-weight: 500;
-    line-height: 1.04;
-    max-width: 620px;
+    line-height: 1.08;
+    max-width: 500px;
 }
 
 .portfolio-insight ul {
     display: grid;
-    gap: 14px;
+    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     list-style: none;
 }
 
@@ -1990,6 +1991,7 @@ section p.section-intro {
 
 .portfolio-insight span {
     color: var(--text-muted);
+    font-size: 0.92em;
     line-height: 1.55;
 }
 
@@ -2026,6 +2028,10 @@ section p.section-intro {
         var(--panel);
 }
 
+.portfolio-page .portfolio-item::after {
+    content: none;
+}
+
 .portfolio-page .portfolio-item::before {
     background-color: rgba(9, 8, 7, 0.64);
     border: 1px solid rgba(226, 197, 121, 0.24);
@@ -2042,6 +2048,10 @@ section p.section-intro {
     position: absolute;
     top: 12px;
     z-index: 3;
+}
+
+.portfolio-page .creative-agent {
+    display: none;
 }
 
 .portfolio-item::after,
@@ -2252,7 +2262,7 @@ img[data-protected-media],
     }
 
     .portfolio-item:first-child {
-        grid-column: span 8;
+        grid-column: span 12;
     }
 
     .portfolio-item:nth-child(2) {
@@ -2267,13 +2277,13 @@ img[data-protected-media],
 
     .portfolio-page .portfolio-item:first-child .portfolio-card-link {
         display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.78fr);
+        grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.78fr);
     }
 
     .portfolio-page .portfolio-item:first-child img {
         aspect-ratio: auto;
         height: 100%;
-        min-height: 430px;
+        min-height: 520px;
         object-fit: cover;
         object-position: center;
     }
@@ -2291,11 +2301,24 @@ img[data-protected-media],
         padding: clamp(30px, 4vw, 46px);
     }
 
+    .portfolio-item:first-child .caption {
+        align-content: center;
+    }
+
     .portfolio-item:first-child .caption h4,
     .portfolio-item:nth-child(6) .caption h4,
     .portfolio-item:nth-child(9) .caption h4,
     .portfolio-item:nth-child(12) .caption h4 {
         font-size: 2em;
+    }
+
+    .portfolio-item:first-child .caption h4 {
+        font-size: clamp(2.25em, 3.4vw, 3.3em);
+        line-height: 0.98;
+    }
+
+    .portfolio-item:first-child .caption p {
+        font-size: 1.02em;
     }
 }
 
@@ -2307,6 +2330,10 @@ img[data-protected-media],
     }
 
     .portfolio-insight {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-insight ul {
         grid-template-columns: 1fr;
     }
 
@@ -4739,13 +4766,21 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     }
 
     body.page-single {
-        padding-top: 150px;
+        padding-top: 112px;
     }
 
     .site-back-button {
-        left: 14px;
-        padding: 8px 12px;
-        top: 132px;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        left: 18px;
+        padding: 6px 0;
+        position: absolute;
+        top: 78px;
+    }
+
+    .site-back-button span:last-child {
+        display: none;
     }
 
     .page-nav {
@@ -4773,6 +4808,33 @@ html[data-theme="light"] .nav-links .nav-submenu a {
         justify-content: flex-start;
         padding-inline: 4px;
         text-align: left;
+    }
+
+    .cookie-floating-button {
+        align-items: center;
+        border-color: rgba(199, 164, 90, 0.2);
+        bottom: 12px;
+        display: inline-flex;
+        font-size: 0;
+        height: 34px;
+        justify-content: center;
+        left: 12px;
+        opacity: 0.62;
+        padding: 0;
+        width: 34px;
+    }
+
+    .cookie-floating-button::before {
+        background-color: currentColor;
+        border-radius: 999px;
+        content: "";
+        height: 9px;
+        width: 9px;
+    }
+
+    .cookie-floating-button:hover,
+    .cookie-floating-button:focus-visible {
+        opacity: 1;
     }
 
     .creative-agent {
@@ -4998,8 +5060,25 @@ html[data-theme="light"] .nav-links .nav-submenu a {
     }
 
     .portfolio-brush-strip {
-        height: 54px;
-        margin-top: -18px;
+        display: none;
+    }
+
+    .portfolio-page #portfolio {
+        padding-top: 48px;
+    }
+
+    .portfolio-page .portfolio-explanation {
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .portfolio-page .portfolio-item:first-child img {
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .portfolio-page .portfolio-item .caption {
+        padding: 22px;
     }
 
     .project-actions,
@@ -5771,13 +5850,24 @@ html[data-theme="light"] .home-editorial .hero-subtitle {
     }
 
     .portfolio-insight {
-        gap: 22px;
-        margin: -8px auto 30px;
-        padding: 24px 0;
+        gap: 8px;
+        margin: 0 auto 16px;
+        padding: 10px 0;
+    }
+
+    .portfolio-insight .eyebrow {
+        display: none;
     }
 
     .portfolio-insight p:not(.eyebrow) {
-        font-size: clamp(1.45em, 8vw, 2.35em);
+        font-family: var(--font-body);
+        font-size: 1.02em;
+        font-weight: 700;
+        line-height: 1.35;
+    }
+
+    .portfolio-insight ul {
+        display: none;
     }
 
     .portfolio-insight li {
